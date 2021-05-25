@@ -1,0 +1,665 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body {
+    background-color: #e4eff8 !important;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Typold', sans-serif !important;
+    font-family: 'Typold Condensed', sans-serif !important;
+    font-family: 'Typold Extended', sans-serif !important;
+    overflow-x: hidden;
+}
+nav{
+    z-index: 1000 ;
+}
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+}
+#sidebar{
+    background-color: #fff;
+}
+#sidebar{
+    background-color: #fff;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    -webkit-transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    -o-transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+
+#sidebarCollapse span:first-of-type {
+    /* rotate first one */
+    -webkit-transform: rotate(45deg) translate(2px, 2px);
+        -ms-transform: rotate(45deg) translate(2px, 2px);
+            transform: rotate(45deg) translate(2px, 2px);
+}
+
+#sidebarCollapse span:nth-of-type(2) {
+    /* second one is not visible */
+    opacity: 0;
+}
+
+#sidebarCollapse span:last-of-type {
+    /* rotate third one */
+    -webkit-transform: rotate(-45deg) translate(1px, -1px);
+        -ms-transform: rotate(-45deg) translate(1px, -1px);
+            transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebarCollapse.active span {
+    /* no rotation */
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    /* all bars are visible */
+    opacity: 1;
+    margin: 5px auto;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 306px;
+    height: 100%;
+    position: fixed;
+    color: #fff;
+    -webkit-transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    -o-transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    -webkit-transform-origin: center left;
+        -ms-transform-origin: center left;
+            transform-origin: center left;
+    /* Set the transformed position of sidebar to center left side. */
+}
+
+#sidebar.active {
+    margin-left: -250px;
+    -webkit-transform: rotateY(100deg);
+            transform: rotateY(100deg);
+    /* Rotate sidebar vertically by 100 degrees. */
+}
+.hidden{
+    display: none;
+}
+@media (max-width: 1100px) {
+    /* Reversing the behavior of the sidebar: 
+       it'll be rotated vertically and off canvas by default, 
+       collapsing in on toggle button click with removal of 
+       the vertical rotation.   */
+    #sidebar {
+        margin-left: -250px;
+        -webkit-transform: rotateY(100deg);
+                transform: rotateY(100deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+
+    .hidden{
+        display: block;
+    }
+    /* Reversing the behavior of the bars: 
+       Removing the rotation from the first,
+       last bars and reappear the second bar on default state, 
+       and giving them a vertical margin */
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        -webkit-transform: rotate(45deg) translate(2px, 2px);
+            -ms-transform: rotate(45deg) translate(2px, 2px);
+                transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        -webkit-transform: rotate(-45deg) translate(1px, -1px);
+            -ms-transform: rotate(-45deg) translate(1px, -1px);
+                transform: rotate(-45deg) translate(1px, -1px);
+    }
+}
+
+body {
+    background-color: #e4eff8 !important;
+
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
+    font-family: 'Typold', sans-serif !important;
+    font-family: 'Typold Condensed', sans-serif !important;
+    font-family: 'Typold Extended', sans-serif !important;
+    overflow-x: hidden;
+}
+
+.active {
+    color: #347AF0 !important;
+}
+
+.hidden-on-mobiel {
+    display: none;
+}
+
+.my-sidebar {
+    /*position: fixed; 
+bottom: 0;
+
+left: 0;
+z-index: 1000;
+display: block;
+overflow-x: hidden;
+overflow-y: auto*/
+    width: 306px !important;
+    overflow-y: auto;
+    overflw-x: hidden;
+}
+
+.svgActive svg path rect {
+    fill: #347AF0 !important;
+}
+
+@media screen and (max-width: 1366px) {
+    /* insert styles here */
+    .my-sidebar {
+        /*    padding-top: 20px !important;
+        min-height: calc(100vh - 50px) !important;
+        width: 16.6666666667% !important;*/
+        z-index: 1000;
+    }
+}
+
+.sibdebar-list-link {
+    font-family: Typold;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+    letter-spacing: 0.5px !important;
+    text-align: left !important;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-family: Typold;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+    letter-spacing: 0.5px !important;
+    text-align: left !important;
+}
+
+a {
+    color: #000000 !important;
+}
+
+.sidebar-list-items ul li {
+    list-style: none;
+    -webkit-transition: 0.5s ease in;
+    -o-transition: 0.5s ease in;
+    transition: 0.5s ease in;
+}
+
+.sidebar-list-items ul li:hover {
+    background-color: #F1F3F5;
+    cursor: pointer;
+}
+
+.sidebar-list-items ul li a:hover {
+    background-color: #F1F3F5;
+    cursor: pointer;
+}
+
+.sidebar-list-items ul li svg {
+    width: 26px;
+    height: 26px;
+    border-radius: 50% !important;
+    /* Add padding around the image if required */
+    /* padding: 10px;*/
+    background-color: #F1F3F5;
+}
+
+
+/*this class will be toogled using javascript*/
+
+.sidebar-list-items ul li a svg rect {
+    fill: #333 !important;
+}
+
+.sidebar-list-news-date {
+    font-family: Titillium Web;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+    color: #00000057;
+}
+
+
+/*sidebar list items news*/
+
+.sidebar-list-news-title {
+    font-family: Typold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.sidebar-list-news-text {
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.6538461446762085px;
+}
+
+
+/*end sidbar list items news*/
+
+
+/*               */
+
+.my-svg-style {
+    color: #333;
+    fill: #333;
+}
+
+a h3 {
+    font-family: Sk-Modernist !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 22px !important;
+    letter-spacing: 0.1em !important;
+    color: #333;
+}
+
+.section-title {
+    font-family: Typold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+.dashboard-text h5 {
+    font-size: 12px !important;
+}
+
+.dashboard-text {
+    position: relative;
+}
+
+.chart-title {
+    /* position: absolute;
+    top: -485px;
+    left: 60px;
+    bottom: 0;
+    ;
+    color: #fff; */
+}
+
+.section-red {
+    color: #FF7675;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #FF7675;
+            text-decoration-color: #FF7675;
+}
+
+.section-light-text {
+    font-family: Typold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+}
+
+@media only screen and (max-width: 600px) {
+    .chart-title {
+        /* position: absolute;
+        top: -227px;
+        left: 118px;
+        bottom: 0;
+        color: #fff; */
+    }
+    .hidden-screen {
+        width: 100%;
+    }
+    .footer-button {}
+    /* .my-sidebar {
+        width: 0px !important;
+        transition: 0.5s ease in out;
+    } */
+    /* .hidden-screen-icon {
+        display: block;
+    } */
+}
+
+/* .hidden-screen-icon {
+    display: none;
+} */
+
+.netrual {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+
+}
+
+.buy {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+
+}
+
+.sell {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+
+}
+
+.techincal-table {}
+
+.footer-text {
+    font-family: Typold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+  
+}
+
+.hidden-screen {
+    width: 0 !important;
+}
+
+.footer-button {
+    background: #1DD1A1 !important;
+    border-radius: 400px !important;
+    color: #fff !important;
+    font-family: Typold;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 19px !important;
+    letter-spacing: 0em !important;
+
+}
+
+
+/* @media only screen and (max-width: 1700px) {
+   .margin-left{
+
+
+    margin-left:21%;
+   }
+
+} */
+
+@media only screen and (max-width: 600px) {
+    /* .img-max {
+        max-width: 315px !important;
+        margin-left: 14px !important;
+    } */
+    .footer-text {
+        font-family: Typold;
+        font-size: 14px;
+    }
+    .footer-button {
+        background: #1DD1A1 !important;
+        border-radius: 50px !important;
+        font-size: 10px !important;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}
+
+
+/*end toggled classes*/
+
+.news-date {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+}
+
+.news-title {
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 26px !important;
+    letter-spacing: -0.6538461446762085px !important;
+    /* text-align: left !important; */
+}
+
+.news-arrow:hover {
+    cursor: pointer;
+    color: #1DD1A1!important;
+}
+
+
+/* (1366x768) WXGA Display */
+
+@media screen and (max-width: 1366px) {
+    /* insert styles here */
+
+}
+
+
+
+
+/* (1280x1024) SXGA Display */
+@media screen and (max-width: 1280px) {
+    /* insert styles here */
+
+}
+.item-active a rect {
+    fill: blue !important;
+}
+.table-title {
+    font-family: Typold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 0px;
+    color: #BDBDBD;
+}
+.table-sma {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 0px;
+}
+.value {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 0px;
+}
+.table-bordered td {
+    bottom: solid 1px red !important;
+}
+.normal {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+    color: #828282;
+}
+.sell {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FF7675;
+}
+.buy {
+    font-family: Typold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #1DD1A1;
+}
+.tables-buttons {
+    font-family: Typold;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 500 important;
+    line-height: 24px important;
+    letter-spacing: 0px important;
+    color: #808080;
+}
+.techincal-time {
+    font-family: Titillium Web;
+    font-size: 14px !important;
+    font-style: normal important;
+    font-weight: 600 important;
+    line-height: 24px important;
+    letter-spacing: 0px important;
+}
+.table-active {
+    background: #1DD1A1 !important;
+    color: #fff !important;
+}
+@media screen and (width: 1600px) {
+    /* main {
+        padding-left: 50px !important;
+    } */
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    /* main {
+        padding-left: 20% !important;
+    }
+     */
+    /* .hidden-on-mobiel {
+        display: block;
+    }
+    
+    .hidden-screen {
+        width: 100%;
+    }
+    
+    .hidden-screen-icon {
+        display: none;
+    } */
+}
+@media only screen and (max-width: 600px) {
+    /* .hidden-screen {
+        background-color: #fff;
+        width: 100% !important;
+        z-index: 1000;
+        /* position: sticky; 
+    } */
+    
+    .section-title {
+        font-size: 12px;
+    }
+    
+    .table-title {
+        font-size: 12px;
+    }
+    
+    table th td {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width:1186px) {
+    .hidden-screen {
+        background-color: #fff;
+        width: 100% !important;
+        /* position: sticky; */
+    }
+    
+    .hidden-screen-icon {
+        display: block;
+    }
+}
+.newsleeter{
+    color: #333;
+}
+.navbar-btn{
+
+    padding: 10px ;
+    border: none;
+    background-color: #333;
+}
+.active{
+
+}
+
+
+nav {
+    position: fixed;
+}
